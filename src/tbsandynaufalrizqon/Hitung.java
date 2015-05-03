@@ -4,13 +4,21 @@
  * and open the template in the editor.
  */
 package tbsandynaufalrizqon;
-
+import java.util.Scanner;
 /**
  *
  * @author Sand
  */
 public class Hitung {
     
+    Scanner input = new Scanner(System.in);
     int jumlah = 0;
+    
+    void rata_rata(){
+        int rata_rata;
+        
+        rata_rata = jumlah/41*100;
+        
+    }
     
 }

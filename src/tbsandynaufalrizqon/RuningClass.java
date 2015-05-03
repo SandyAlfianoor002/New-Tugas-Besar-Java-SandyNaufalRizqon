@@ -12,12 +12,13 @@ package tbsandynaufalrizqon;
 public class RuningClass {
     public static void main (String [] Naufal_Rizqon_Sandy){
 		LogicKelas play = new LogicKelas();
-		//play.IdentitasRuangKelas();
-		play.JumlahKondisiPosisiSarana();
-		play.LingkunganRuangKelas();
+		play.IdentitasRuangKelas(); //Method by Sandy
+		//play.JumlahKondisiPosisiSarana();
+		play.LingkunganRuangKelas(); //Method by Sandy
 		//play.KebersihanRuangKelas();
 		//play.KenyamananRuangKelas();
 		//play.KeamananRuangKelas();
+                //play.rata_rata();
 	}
     
     
