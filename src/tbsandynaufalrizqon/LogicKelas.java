@@ -9,14 +9,14 @@ import java.util.Scanner;
 
 /**
  *
- * @author Sandy
+ * @author Sand
  */
-public class LogicKelas extends Hitung {
+public class LogicKelas extends Warisan_jumlah_kondisi_posisi_sarana {
 
     InstanceClass kelas = new InstanceClass();
 	
 		
-	void IdentitasRuangKelas(){
+	public void IdentitasRuangKelas(){
 		input = new Scanner (System.in);
 		
 		System.out.println("\t\t\t\t\t\t\t~ IDENTITY OF THE CLASS ~\n");
@@ -68,7 +68,6 @@ public class LogicKelas extends Hitung {
 		else{
 			System.out.println("Fakultas Anda Tidak Dikenali Sistem\n");
 		}
-               
 	}
 
 //////////////////////////////////////////////////////////////////////////////////////////////
@@ -77,14 +76,14 @@ public class LogicKelas extends Hitung {
 		kelas.inputKondisiRuangKelas();
 		if (kelas.getPanjangRuangKelas()!= kelas.luas()){
 		System.out.println("\nPanjang Ruang Kelas Sesuai");
-                jumlah++;
+                
 		}
 		else{
 			System.out.println("Panjang Ruang Kelas Tidak Sesuai");
 		}
 		if (kelas.rasioLuas()>=0.5){
 			System.out.println("Rasio Sesuai");
-                        jumlah++;
+                       
 		}
                 
 		else{
@@ -92,29 +91,32 @@ public class LogicKelas extends Hitung {
 		}	
 		if(kelas.getJumlahPintu()>=2){
 			System.out.println("Jumlah Pintu Sesuai");
-                        jumlah++;
+                     
 		}
 		else{
 			System.out.println("Jumlah Pintu Tidak Sesuai");
 		}
 		if(kelas.getJumlahJendela()>=1){
-			System.out.println("Jumlah Jendela Sesuai"); jumlah++;
+			System.out.println("Jumlah Jendela Sesuai"); 
 		}
 		else{
 			System.out.println("Jumlah Jendela Tidak Sesuai");
 		}
-              
 	}
 	
 //////////////////////////////////////////////////////////////////////////////////////////////
 	
+	
+	
+//////////////////////////////////////////////////////////////////////////////////////////////
+		
 	void LingkunganRuangKelas(){
 		kelas.inputLingkunganRuangKelas();
 		
 		//LANTAI
 		System.out.println("\n\t*Analisis Kebersihan*");
 		if(kelas.getKondisiLantai().equals("BERSIH")){
-			System.out.println("Kondisi Lantai Sesuai"); jumlah++;
+			System.out.println("Kondisi Lantai Sesuai");
 		}
 		else{
 			System.out.println("Kondisi Lantai Tidak Sesuai");
@@ -123,7 +125,7 @@ public class LogicKelas extends Hitung {
 		//DINDING
 		System.out.println("\t*Analisis Kebersihan*");
 		if(kelas.getKondisiDinding().equals("BERSIH")){
-			System.out.println("Kondisi Dinding Sesuai"); jumlah++;
+			System.out.println("Kondisi Dinding Sesuai");
 		}
 		else{
 			System.out.println("Kondisi Dinding Tidak Sesuai");
@@ -132,7 +134,7 @@ public class LogicKelas extends Hitung {
 		//ATAP
 		System.out.println("\t*Analisis Kebersihan*");
 		if(kelas.getKondisiAtap().equals("BERSIH")){
-			System.out.println("Kondisi Atap Sesuai"); jumlah++;
+			System.out.println("Kondisi Atap Sesuai");
 		}
 		else{
 			System.out.println("Kondisi Atap Tidak Sesuai");
@@ -141,7 +143,7 @@ public class LogicKelas extends Hitung {
 		//PINTU
 		System.out.println("\t*Analisis Kebersihan*");
 		if(kelas.getKondisiPintu().equals("BERSIH")){
-			System.out.println("Kondisi Pintu Sesuai"); jumlah++;
+			System.out.println("Kondisi Pintu Sesuai");
 		}
 		else{
 			System.out.println("Kondisi Pintu Tidak Sesuai");
@@ -150,10 +152,156 @@ public class LogicKelas extends Hitung {
 		//JENDELA
 		System.out.println("\t*Analisis Kebersihan*");
 		if(kelas.getKondisiJendela().equals("BERSIH")){
-			System.out.println("Kondisi Jendela Sesuai"); jumlah++;
+			System.out.println("Kondisi Jendela Sesuai");
 		}
 		else{
 			System.out.println("Kondisi Jendela Tidak Sesuai");
 		}
 	}
+	
+//////////////////////////////////////////////////////////////////////////////////////////////
+	
+	void KebersihanRuangKelas(){
+		kelas.inputKebersihanRuangKelas();	
+		
+		//SIRKULASIUDARA
+		System.out.println("\n\t*Analisis Sirkulasi Udara*");
+		if(kelas.getSirkulasiUdara().equals("Lancar")){
+			System.out.println("Sirkulasi Udara Sesuai");
+		}
+		else{
+			System.out.println("Sirkulasi Udara Tidak Sesuai");
+		}
+		
+		//PENCAHAYAAN
+		System.out.println("\t*Analisis Pencahayaan*");
+		if(kelas.getNilaiPencahayaan() == 250){
+			System.out.println("Pencahayaan Sesuai");
+		}
+		else{
+			System.out.println("Pencahayaan Tidak Sesuai");
+		}
+		if(kelas.getNilaiPencahayaan() == 350){
+			System.out.println("Pencahayaan Sesuai");
+		}
+		else{
+			System.out.println("Pencahayaan Tidak Sesuai");
+		}
+		
+		//KELEMBAPAN
+		System.out.println("\t*Analisis Kelembapan*");
+		if(kelas.getKelembapan() == 70 ){
+			System.out.println("Kelembapan Sesuai");
+		}
+		else{
+			System.out.println("Kelembapan Tidak Sesuai");
+		}
+		if(kelas.getKelembapan() == 80 ){
+			System.out.println("Kelembapan Sesuai");
+		}
+		else{
+			System.out.println("Kelembapan Tidak Sesuai");
+		}
+		
+		//SUHU
+		System.out.println("\t*Analisis Suhu*");
+		if(kelas.getSuhu() == 25){
+			System.out.println("Suhu Sesuai");
+		}
+		else{
+			System.out.println("Suhu Tidak Sesuai");
+		}
+		if(kelas.getSuhu() == 35){
+			System.out.println("Suhu Sesuai");
+		}
+		else{
+			System.out.println("Suhu Tidak Sesuai");
+		}
+	}
+		
+//////////////////////////////////////////////////////////////////////////////////////////////
+
+	void KenyamananRuangKelas(){
+		kelas.inputKenyamananRuangKelas();	
+		
+		//KEBISINGAN
+		System.out.println("\n\t*Analisis Kebisingan*");
+		if(kelas.Kebisingan().equals("Tidak Bising")){
+			System.out.println("Kebisingan Sesuai");
+		}
+		else{
+			System.out.println("Kebisingan Tidak Sesuai");
+		}
+		
+		//BAU
+		System.out.println("\t*Analisis Bau*");
+		if(kelas.getBau().equals("Tidak Bau")){
+			System.out.println("Bau Sesuai");
+		}
+		else{
+			System.out.println("Bau Tidak Sesuai");
+		}
+		
+		//KEBOCORAN
+		System.out.println("\t*Analisis Kebocoran*");
+		if(kelas.getKebocoran().equals("Tidak Bocor")){
+			System.out.println("Kebocoran Sesuai");
+		}
+		else{
+			System.out.println("Kebocoran Tidak Sesuai");
+		}
+		
+		//KERUSAKAN
+		System.out.println("\t*Analisis Kerusakan*");
+		if(kelas.getKerusakan().equals("Tidak Rusak")){
+			System.out.println("Kerusakan Sesuai");
+		}
+		else{
+			System.out.println("Kerusakan Tidak Sesuai");
+		}
+		
+		//KEAUSAN
+		System.out.println("\t*Analisis Keausan*");
+		if(kelas.getKeausan().equals("Tidak Aus")){
+			System.out.println("Keausan Sesuai");
+		}
+		else{
+			System.out.println("Keausan Tidak Sesuai");
+		}
+	}
+
+//////////////////////////////////////////////////////////////////////////////////////////////
+
+	void KeamananRuangKelas(){
+		kelas.inputKeamananRuangKelas();	
+			
+		//KEKOKOHAN
+		System.out.println("\n\t*Analisis Kekokohan*");
+		if(kelas.getKekokohan().equals("Kokoh")){
+			System.out.println("Kekokohan Sesuai");
+		}
+		else{
+			System.out.println("Kekokohan Tidak Sesuai");
+		}
+		
+		//KUNCI PINTU DAN JENDELA
+		System.out.println("\t*Analisis Kunci Pintu dan Jendela*");
+		if(kelas.getKunciPintuDanJendela().equals("Ada")){
+			System.out.println("Kunci Pintu dan Jendela Sesuai");
+		}
+		else{
+			System.out.println("Kunci Pintu dan Jendela Tidak Sesuai");
+		}
+		
+		//BAHAYA
+		System.out.println("\t*Analisis Bahaya*");
+		if(kelas.getBahaya().equals("Aman")){
+			System.out.println("Bahaya Sesuai");
+		}
+		else{
+			System.out.println("Bahaya Tidak Sesuai");
+		}	
+	}
 }
+
+
