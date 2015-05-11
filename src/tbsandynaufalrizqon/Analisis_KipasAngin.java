@@ -7,7 +7,7 @@ package tbsandynaufalrizqon;
 
 /**
  *
- * @author Sand
+ * @author Ahmad Naufal
  */
 public class Analisis_KipasAngin extends Warisan_jumlah_kondisi_posisi_sarana{
     
