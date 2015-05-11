@@ -7,7 +7,7 @@ package tbsandynaufalrizqon;
 
 /**
  *
- * @author Ahmad Naufal
+ * @author Ahmad Naufal/
  */
 public class Analisis_CCTV extends Warisan_jumlah_kondisi_posisi_sarana {
 
