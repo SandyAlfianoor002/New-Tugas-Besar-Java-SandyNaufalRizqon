@@ -7,14 +7,14 @@ package tbsandynaufalrizqon;
 
 /**
  *
- * @author Sand
+ * @author Muhammad Sandy Alfianoor
  */
 public class Analisis_StopKontak extends Warisan_jumlah_kondisi_posisi_sarana{
     
     public Analisis_StopKontak(){
         System.out.println("\nSTOP KONTAK");
-        Input();
-        Lihat();
+        Input("Stop Kontak");
+        Lihat("Stop Kontak");
     }
     
     //STOP KONTAK

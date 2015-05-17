@@ -13,8 +13,8 @@ public class Analisis_AC extends Warisan_jumlah_kondisi_posisi_sarana{
     
     public Analisis_AC(){
         System.out.println("\nAC");
-        Input();
-        Lihat();
+        Input("AC");
+        Lihat("AC");
     }
     public String Analisis(){
         //AC

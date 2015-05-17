@@ -14,19 +14,22 @@ public class Warisan_jumlah_kondisi_posisi_sarana {
     int jumlah;
     String kondisi;
     String posisi;
+    String fasilitas;
     
-    public void Input(){
-        System.out.println("Masukkan Jumlah : ");
+    public void Input(String fasilitas){
+        this.fasilitas = fasilitas;
+        System.out.println("Masukkan Jumlah "+fasilitas+": ");
         jumlah = input.nextInt();
-        System.out.println("Kondisi nya : ");
+        System.out.println("Kondisi nya "+fasilitas+": ");
         kondisi = input.next();
-        System.out.println("Posisi nya : ");
+        System.out.println("Posisi nya  "+fasilitas+": ");
         posisi = input.next();
     }
     
-    public void Lihat(){
-        System.out.println("\nJumlah nya : "+jumlah);
-        System.out.println("Kondisi nya : "+kondisi);
-        System.out.println("Posisi nya : "+posisi);
+    public void Lihat(String fasilitas){
+        this.fasilitas = fasilitas;
+        System.out.println("\nJumlah nya"+fasilitas+": "+jumlah);
+        System.out.println("Kondisi nya "+fasilitas+": "+kondisi);
+        System.out.println("Posisi nya "+fasilitas+": "+posisi);
     }
 }

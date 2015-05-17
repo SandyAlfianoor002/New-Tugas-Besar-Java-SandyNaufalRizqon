@@ -13,30 +13,31 @@ public class Analisis_CCTV extends Warisan_jumlah_kondisi_posisi_sarana {
 
     public Analisis_CCTV(){
         System.out.println("\nCCTV");
-        Input();
-        Lihat();
+        Input("CCTV");
+        Lihat("CCTV");
     
 }
     public String Analisis(){
-        //AC
-		System.out.println("\t*Analisis AC*");
-		if(jumlah >= 1){
-			System.out.println("Jumlah AC Sesuai");
+        //CCTV
+		System.out.println("\t*Analisis CCTV*");
+		if(jumlah == 2){
+			System.out.println("Jumlah CCTV Sesuai");
 		}
 		else{
-			System.out.println("Jumlah AC Tidak Sesuai");
+			System.out.println("Jumlah CCTV Tidak Sesuai");
 		}
 		if(kondisi.equals("BAIK")){
-			System.out.println("Kondisi AC Sesuai");
+			System.out.println("Kondisi CCTV Sesuai");
 		}
 		else{
-			System.out.println("Kondisi AC Tidak Sesuai");
+			System.out.println("Kondisi CCTV Tidak Sesuai");
 		}
-		if(posisi.equals("didepan")||posisi.equals("dibelakang")){
-			System.out.println("Posisi AC Sesuai");
+		if(posisi.equals("dibelakang")||posisi.equals("disamping")){
+			System.out.println("Posisi CCTV Sesuai");
 		}
 		else{
-			System.out.println("Posisi AC Tidak Sesuai");
+			System.out.println("Posisi CCTV Tidak Sesuai");
+                        
 		}
                 return Analisis();
     }

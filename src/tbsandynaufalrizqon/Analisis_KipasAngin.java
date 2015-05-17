@@ -13,8 +13,8 @@ public class Analisis_KipasAngin extends Warisan_jumlah_kondisi_posisi_sarana{
     
     public Analisis_KipasAngin(){
         System.out.println("\nKipas Angin");
-        Input();
-        Lihat();
+        Input("kipas angin");
+        Lihat("kipas angin");
     }
     public String Analisis(){
     //KIPAS ANGIN

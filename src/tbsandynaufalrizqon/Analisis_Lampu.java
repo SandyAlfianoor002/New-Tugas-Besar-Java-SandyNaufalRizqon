@@ -13,8 +13,8 @@ public class Analisis_Lampu extends Warisan_jumlah_kondisi_posisi_sarana{
     
     public Analisis_Lampu(){
         System.out.println("\nLampu");
-        Input();
-        Lihat();
+        Input("Lampu");
+        Lihat("Lampu");
     }
     public String Analisis(){
         //LAMPU

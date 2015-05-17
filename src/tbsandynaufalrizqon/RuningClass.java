@@ -10,35 +10,30 @@ package tbsandynaufalrizqon;
 package tbsandynaufalrizqon;
 public class RuningClass {
     public static void main (String [] Naufal_Rizqon_Sandy){
+     
+        Warisan_jumlah_kondisi_posisi_sarana STK = new Analisis_StopKontak();
+        Warisan_jumlah_kondisi_posisi_sarana LCD = new Analisis_LCD();
+        Warisan_jumlah_kondisi_posisi_sarana KPA = new Analisis_KipasAngin();
+        Warisan_jumlah_kondisi_posisi_sarana LAM = new Analisis_Lampu();
+        Warisan_jumlah_kondisi_posisi_sarana AC = new Analisis_AC();
+        Warisan_jumlah_kondisi_posisi_sarana CCTV = new Analisis_CCTV();
         
+        Warisan_jumlah_kondisi_posisi_sarana fasilitas [] = { STK, LCD, KPA, LAM, AC, CCTV};
         
-        Analisis_StopKontak SK = new Analisis_StopKontak();
-        SK.Analisis();
-        
-        Analisis_LCD proyektor = new Analisis_LCD();
-        proyektor.Analisis();
-        
-        Analisis_KipasAngin KA = new Analisis_KipasAngin();
-        KA.Analisis();
-        
-        Analisis_CCTV pantau = new Analisis_CCTV();
-        pantau.Analisis();
-        
-        Analisis_Lampu terang = new Analisis_Lampu();
-        terang.Analisis();
-        
-        Analisis_AC suhu = new Analisis_AC();
-        suhu.Analisis();
-        
-        LogicKelas play = new LogicKelas();
+        for(Warisan_jumlah_kondisi_posisi_sarana go : fasilitas){
+    
+            go.Input("");
+            go.Lihat("");
+            
+            
 		//play.IdentitasRuangKelas();
 		//play.LingkunganRuangKelas();
 		//play.KebersihanRuangKelas();
 		//play.KenyamananRuangKelas();
 		//play.KeamananRuangKelas();
-	}
+	
     
     
-    
-
+        }
+        }
 }

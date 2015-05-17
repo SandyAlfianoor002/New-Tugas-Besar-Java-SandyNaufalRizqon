@@ -7,15 +7,15 @@ package tbsandynaufalrizqon;
 
 /**
  *
- * @author Sand
+ * @author Muhammad Sandy Alfianoor
  */
 public class Analisis_LCD extends Warisan_jumlah_kondisi_posisi_sarana {
     
 
 public Analisis_LCD(){
     System.out.println("\nAnalisis LCD");
-    Input();
-    Lihat();
+    Input("Kabel LCD");
+    Lihat("Kabel LCD");
 }
 //LCD
     
