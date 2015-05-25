@@ -5,40 +5,78 @@
  */
 package tbsandynaufalrizqon;
 
+import java.util.Scanner;
+
 /**
  *
- * @author Muhammad Sandy Alfianoor
+ * @author Ahmad Naufal
  */
-public class Analisis_LCD extends Warisan_jumlah_kondisi_posisi_sarana {
+public class Analisis_LCD implements Warisan_jumlah_kondisi_posisi_sarana {
     
+        Scanner input = new Scanner (System.in);
+	private int jumlah;
+	private String kondisi;
+	private String posisi;
+	
+	public int getJumlah() {
+		return jumlah;
+	}
+	public void setJumlah(int jumlah) {
+		this.jumlah = jumlah;
+	}
+	public String getKondisi() {
+		return kondisi;
+	}
+	public void setKondisi(String kondisi) {
+		this.kondisi = kondisi;
+	}
+	public String getPosisi() {
+		return posisi;
+	}
+	public void setPosisi(String posisi) {
+		this.posisi = posisi;
+	}
 
-public Analisis_LCD(){
-    System.out.println("\nAnalisis LCD");
-    Input("Kabel LCD");
-    Lihat("Kabel LCD");
-}
-//LCD
-    
-    public String Analisis(){
-		System.out.println("\t*Analisis LCD*");
-		if(jumlah>=1){
-			System.out.println("Jumlah Kabel LCD Sesuai"); 
+    @Override
+    public int analyticJumlah() {
+        System.out.println("masukkan jumlah Kabel LCD : ");
+		jumlah = input.nextInt();
+		if(jumlah >= 1){
+			return 1;
 		}
 		else{
-			System.out.println("Jumlah Kabel LCD Tidak Sesuai");
+			return 0;
 		}
-		if(kondisi.equals("Berfungsi")){
-			System.out.println("Kondisi Kabel LCD Sesuai"); 
+    }
+
+    @Override
+    public int analyticKondisi() {
+        System.out.println("masukkan kondisi Kabel LCD : ");
+		posisi = input.next();
+		if(kondisi.equals("berfungsi")){
+			return 1;
 		}
 		else{
-			System.out.println("Kondisi Kabel LCD Tidak Sesuai");
+			return 0;
 		}
-		if(posisi.equals("Dekat Dosen")){
-			System.out.println("Posisi Kabel LCD Sesuai");
+    }
+
+    @Override
+    public int analyticPosisi() {
+        System.out.println("masukkan posisi Kabel LCD : ");
+		posisi = input.next();
+		if(posisi.equals("dekat_dosen")){
+			return 1;
 		}
 		else{
-			System.out.println("Posisi Kabel LCD Tidak Sesuai");
+			return 0;
 		}
-                return Analisis();
-}
+    }
+
+    @Override
+    public void show() {
+        System.out.println("jumlah Kabel LCD : "+jumlah);
+		System.out.println("kondisi Kabel LCD : "+kondisi);
+		System.out.println("posisi Kabel LCD : "+posisi);
+    }
 }

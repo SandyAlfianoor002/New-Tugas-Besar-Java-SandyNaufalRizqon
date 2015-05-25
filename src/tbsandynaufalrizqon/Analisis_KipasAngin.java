@@ -5,38 +5,79 @@
  */
 package tbsandynaufalrizqon;
 
+import java.util.Scanner;
+
 /**
  *
  * @author Ahmad Naufal
  */
-public class Analisis_KipasAngin extends Warisan_jumlah_kondisi_posisi_sarana{
+public class Analisis_KipasAngin implements Warisan_jumlah_kondisi_posisi_sarana{
     
-    public Analisis_KipasAngin(){
-        System.out.println("\nKipas Angin");
-        Input("kipas angin");
-        Lihat("kipas angin");
+    Scanner input = new Scanner (System.in);
+    private int jumlah;
+    private String kondisi;
+    private String posisi;
+
+    public int getJumlah() {
+		return jumlah;
+	}
+	public void setJumlah(int jumlah) {
+		this.jumlah = jumlah;
+	}
+	public String getKondisi() {
+		return kondisi;
+	}
+	public void setKondisi(String kondisi) {
+		this.kondisi = kondisi;
+	}
+	public String getPosisi() {
+		return posisi;
+	}
+	public void setPosisi(String posisi) {
+		this.posisi = posisi;
+	}
+
+    @Override
+    public int analyticJumlah() {
+        System.out.println("masukkan jumlah Kipas Angin : ");
+		jumlah = input.nextInt();
+		if(jumlah >= 2){
+			return 1;
+		}
+		else{
+			return 0;
+		}
     }
-    public String Analisis(){
-    //KIPAS ANGIN
-		System.out.println("\t*Analisis Kipas Angin*");
-		if(jumlah== 2){
-			System.out.println("Jumlah Kipas Angin Sesuai");
+
+    @Override
+    public int analyticKondisi() {
+        System.out.println("masukkan kondisi Kipas Angin : ");
+		kondisi = input.next();
+		if(kondisi.equals("baik") && jumlah == 2){
+			return 1;
 		}
 		else{
-			System.out.println("Jumlah Kipas Angin Tidak Sesuai");
+			return 0 ;
 		}
-		if(kondisi.equals("BAIK") && jumlah== 2){
-			System.out.println("Kondisi Kipas Angin Sesuai");
+    }
+
+    @Override
+    public int analyticPosisi() {
+        System.out.println("masukkan posisi Kipas Angin: ");
+		posisi = input.next();
+		if(posisi.equals("atap_ruangan")){
+			return 1;
 		}
 		else{
-			System.out.println("Kondisi Kipas Angin Tidak Sesuai");
+			return 0;
 		}
-		if(posisi.equals("atap ruangan")){
-			System.out.println("Posisi Kipas Angin Sesuai");
-		}
-		else{
-			System.out.println("Posisi Kipas Angin Tidak Sesuai");
-		}
-                return Analisis();
-}
+    }
+
+    @Override
+    public void show() {
+       System.out.println("jumlah Kipas Angin : "+jumlah);
+		System.out.println("kondisi Kipas Angin : "+kondisi);
+		System.out.println("posisi Kipas Angin : "+posisi);
+    }
+    
 }
