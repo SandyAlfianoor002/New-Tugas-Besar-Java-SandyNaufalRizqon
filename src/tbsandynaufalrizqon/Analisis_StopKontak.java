@@ -5,40 +5,78 @@
  */
 package tbsandynaufalrizqon;
 
+import java.util.Scanner;
+
 /**
  *
  * @author Muhammad Sandy Alfianoor
  */
-public class Analisis_StopKontak extends Warisan_jumlah_kondisi_posisi_sarana{
+public abstract class Analisis_StopKontak implements Warisan_jumlah_kondisi_posisi_sarana{
     
-    public Analisis_StopKontak(){
-        System.out.println("\nSTOP KONTAK");
-        Input("Stop Kontak");
-        Lihat("Stop Kontak");
+     Scanner input = new Scanner (System.in);
+	private int jumlah;
+	private String kondisi;
+	private String posisi;
+	
+	public int getJumlah() {
+            return jumlah;
+	}
+	public void setJumlah(int jumlah) {
+            this.jumlah = jumlah;
+	}
+	public String getKondisi() {
+            return kondisi;
+	}
+	public void setKondisi(String kondisi) {
+            this.kondisi = kondisi;
+	}
+	public String getPosisi() {
+            return posisi;
+	}
+	public void setPosisi(String posisi) {
+            this.posisi = posisi;
+	} 
+
+    @Override
+    public int analyticJumlah() {
+        System.out.println("\nMasukkan Jumlah Stop Kontak : ");
+            jumlah = input.nextInt();
+            if(jumlah >= 4){
+            return 1;
+            }
+            else{
+            return 0;
+            }
     }
-    
-    //STOP KONTAK
-    public void Analisis(){
-		System.out.println("\n\t*Analisis StopKontak*");
-		
-		if (jumlah >= 4){
-			System.out.println("Jumlah Stop Kontak Sesuai"); 
-		}
-		else if(jumlah  <4){
-			System.out.println("Jumlah Stop Kontak Tidak Sesuai");
-		}
-		if(kondisi.equals("Baik") && jumlah ==4){
-			System.out.println("Kondisi Stop Kontak Sesuai"); 
-		}
-		else{
-			System.out.println("Kondisi Stop Kontak Tidak Sesuai");
-		}
-		if(posisi.equals("DekatDosen") || posisi.equals("DipojokRuangan")){
-			System.out.println("Posisi Stop Kontak Sesuai");
-		}
-		else{
-			System.out.println("Posisi Stop Kontak Tidak Sesuai");
-		}
-                
+
+    @Override
+    public int analyticKondisi() {
+        System.out.println("\nMasukkan Kondisi Stop Kontak : ");
+            kondisi = input.next();
+            if(kondisi.equals("BAIK")){
+            return 1;
+            }
+            else{
+            return 0;
+            }
+    }
+
+    @Override
+    public int analyticPosisi() {
+        System.out.println("\nMasukkan Posisi Stop Kontak : ");
+            posisi = input.next();
+            if(posisi.equals("dekatdosen") || posisi.equals("dipojokruangan")){
+            return 1; 
+            }
+            else{
+            return 0;
+            }
+    }
+
+    @Override
+    public void show() {
+        System.out.println("\nJumlah Stop Kontak : "+jumlah);
+	System.out.println("Kondisi Stop Kontak : "+kondisi);
+	System.out.println("Posisi Stop Kontak : "+posisi);
     }
 }

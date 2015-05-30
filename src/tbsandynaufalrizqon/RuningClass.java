@@ -11,29 +11,50 @@ package tbsandynaufalrizqon;
 public class RuningClass {
     public static void main (String [] Naufal_Rizqon_Sandy){
      
-        Warisan_jumlah_kondisi_posisi_sarana STK = new Analisis_StopKontak();
-        Warisan_jumlah_kondisi_posisi_sarana LCD = new Analisis_LCD();
-        Warisan_jumlah_kondisi_posisi_sarana KPA = new Analisis_KipasAngin();
-        Warisan_jumlah_kondisi_posisi_sarana LAM = new Analisis_Lampu();
-        Warisan_jumlah_kondisi_posisi_sarana AC = new Analisis_AC();
-        Warisan_jumlah_kondisi_posisi_sarana CCTV = new Analisis_CCTV();
-        
-        Warisan_jumlah_kondisi_posisi_sarana fasilitas [] = { STK, LCD, KPA, LAM, AC, CCTV};
-        
-        for(Warisan_jumlah_kondisi_posisi_sarana go : fasilitas){
-    
-            go.Input("");
-            go.Lihat("");
-            
-            
-		//play.IdentitasRuangKelas();
-		//play.LingkunganRuangKelas();
-		//play.KebersihanRuangKelas();
-		//play.KenyamananRuangKelas();
-		//play.KeamananRuangKelas();
-	
-    
-    
-        }
-        }
+        LogicKelas a = new LogicKelas();
+                a.IdentitasRuangKelas();
+                a.KondisiRuangKelas();
+  
+            Analisis_StopKontak sk = new Analisis_StopKontak() {};
+		sk.analyticJumlah();
+		sk.analyticKondisi();
+		sk.analyticPosisi();
+		sk.show(); 
+     
+            Analisis_LCD lcd = new Analisis_LCD() {};
+		lcd.analyticJumlah();
+		lcd.analyticKondisi();
+		lcd.analyticPosisi();
+		lcd.show(); 
+             
+            Analisis_Lampu lp = new Analisis_Lampu() {};
+		lp.analyticJumlah();
+                lp.analyticKondisi();
+		lp.analyticPosisi();
+		lp.show();
+              
+            Analisis_KipasAngin ka = new Analisis_KipasAngin() {};
+		ka.analyticJumlah();
+		ka.analyticKondisi();
+		ka.analyticPosisi();
+		ka.show();
+                
+            Analisis_AC ac = new Analisis_AC() {};
+		ac.analyticJumlah();
+                ac.analyticKondisi();
+		ac.analyticPosisi();
+		ac.show();
+
+            Analisis_CCTV cctv = new Analisis_CCTV() {};
+		cctv.analyticJumlah();
+		cctv.analyticKondisi();
+		cctv.analyticPosisi();
+		cctv.show();
+
+            LogicKelas b = new LogicKelas();
+                b.LingkunganRuangKelas();
+                b.KebersihanRuangKelas();
+                b.KenyamananRuangKelas();
+                b.KeamananRuangKelas();   
+    }
 }

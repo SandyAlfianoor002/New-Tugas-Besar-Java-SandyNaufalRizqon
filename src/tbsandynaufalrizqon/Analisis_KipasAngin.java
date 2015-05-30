@@ -11,7 +11,7 @@ import java.util.Scanner;
  *
  * @author Ahmad Naufal
  */
-public class Analisis_KipasAngin implements Warisan_jumlah_kondisi_posisi_sarana{
+public abstract class Analisis_KipasAngin implements Warisan_jumlah_kondisi_posisi_sarana{
     
     Scanner input = new Scanner (System.in);
     private int jumlah;
