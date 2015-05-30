@@ -9,7 +9,7 @@ import java.util.Scanner;
 
 /**
  *
- * @author Ahmad Naufal
+ * @author Ahmad Naufal/
  */
 public class Analisis_LCD implements Warisan_jumlah_kondisi_posisi_sarana {
     
