@@ -5,39 +5,78 @@
  */
 package tbsandynaufalrizqon;
 
+import java.util.Scanner;
+
 /**
  *
  * @author Yurizal Rizqon Rifani/
  */
-public class Analisis_Lampu extends Warisan_jumlah_kondisi_posisi_sarana{
+public abstract class Analisis_Lampu implements Warisan_jumlah_kondisi_posisi_sarana{
     
-    public Analisis_Lampu(){
-        System.out.println("\nLampu");
-        Input("Lampu");
-        Lihat("Lampu");
+  Scanner input = new Scanner (System.in);
+	private int jumlah;
+	private String kondisi;
+	private String posisi;
+	
+	public int getJumlah() {
+            return jumlah;
+	}
+	public void setJumlah(int jumlah) {
+            this.jumlah = jumlah;
+	}
+	public String getKondisi() {
+            return kondisi;
+	}
+	public void setKondisi(String kondisi) {
+            this.kondisi = kondisi;
+	}
+	public String getPosisi() {
+            return posisi;
+	}
+	public void setPosisi(String posisi) {
+            this.posisi = posisi;
+	} 
+
+    @Override
+    public int analyticJumlah() {
+        System.out.println("\nMasukkan Jumlah Lampu : ");
+            jumlah = input.nextInt();
+            if(jumlah >= 18){
+            return 1;
+            }
+            else{
+            return 0;
+            }
     }
-    public String Analisis(){
-        //LAMPU
-		System.out.println("\t*Analisis Lampu*");
-		if(jumlah>=18){
-			System.out.println("Jumlah Lampu Sesuai");
-		}
-		else{
-			System.out.println("Jumlah Lampu Tidak Sesuai");
-		}
-		if(kondisi.equals("BAIK")&& jumlah == 18){
-			System.out.println("Kondisi Lampu Sesuai");
-		}
-		else{
-			System.out.println("Kondisi Lampu Tidak Sesuai");
-		}
-		if(posisi.equals("atap ruangan")){
-			System.out.println("Posisi Lampu Sesuai");
-		}
-		else{
-			System.out.println("Posisi Lampu Tidak Sesuai");
-		}
-		return Analisis();
-		
-}
+
+    @Override
+    public int analyticKondisi() {
+        System.out.println("\nMasukkan Kondisi Lampu : ");
+            kondisi = input.next();
+            if(kondisi.equals("BAIK")){
+            return 1;
+            }
+            else{
+            return 0;
+            }
+    }
+
+    @Override
+    public int analyticPosisi() {
+        System.out.println("\nMasukkan Posisi Lampu : ");
+            posisi = input.next();
+            if(posisi.equals("atapruangan")){
+            return 1;
+            }
+            else{
+            return 0;
+            }
+    }
+
+    @Override
+    public void show() {
+        System.out.println("\nJumlah Lampu : "+jumlah);
+	System.out.println("Kondisi Lampu : "+kondisi);
+	System.out.println("Posisi Lampu : "+posisi);
+    }
 }
