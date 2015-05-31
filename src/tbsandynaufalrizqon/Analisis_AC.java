@@ -7,7 +7,7 @@ package tbsandynaufalrizqon;
 
 /**
  *
- * @author Yurizal Rizqon Rifani
+ * @author Sand
  */
 public class Analisis_AC extends Warisan_jumlah_kondisi_posisi_sarana{
     
