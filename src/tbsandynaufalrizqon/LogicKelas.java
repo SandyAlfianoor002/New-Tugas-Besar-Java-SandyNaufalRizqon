@@ -14,8 +14,6 @@ import java.util.Scanner;
 public class LogicKelas  {
 
     InstanceClass kelas = new InstanceClass();
-	
-		
 	public void IdentitasRuangKelas(){
             Scanner input = new Scanner (System.in);
 
@@ -72,6 +70,8 @@ public class LogicKelas  {
 
 //////////////////////////////////////////////////////////////////////////////////////////////////////
 
+ 
+   
 	void KondisiRuangKelas(){
 		kelas.inputKondisiRuangKelas();
 		if (kelas.getPanjangRuangKelas()!= kelas.luas()){
@@ -102,6 +102,8 @@ public class LogicKelas  {
 
 //////////////////////////////////////////////////////////////////////////////////////////////////////
 
+ 
+   
 	void LingkunganRuangKelas(){
 		kelas.inputLingkunganRuangKelas();
 
@@ -153,6 +155,7 @@ public class LogicKelas  {
 
 //////////////////////////////////////////////////////////////////////////////////////////////////////
 
+   
 	void KebersihanRuangKelas(){
 		kelas.inputKebersihanRuangKelas();
 
@@ -213,6 +216,7 @@ public class LogicKelas  {
 
 //////////////////////////////////////////////////////////////////////////////////////////////////////
 
+   
 	void KenyamananRuangKelas(){
 		kelas.inputKenyamananRuangKelas();
 
