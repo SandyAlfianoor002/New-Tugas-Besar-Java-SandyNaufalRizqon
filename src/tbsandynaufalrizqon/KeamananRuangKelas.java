@@ -3,6 +3,8 @@ package tbsandynaufalrizqon;
 
 import java.util.Scanner;
 
+//@Author : Muhammad Sandy Alfianoor
+
 public class KeamananRuangKelas extends induk_abstrak{
     Scanner input = new Scanner(System.in);
 	private String kekokohan;

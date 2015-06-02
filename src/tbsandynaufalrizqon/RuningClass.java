@@ -56,5 +56,25 @@ public class RuningClass {
                 b.KebersihanRuangKelas();
                 b.KenyamananRuangKelas();
                 b.KeamananRuangKelas();   
+                
+          /*
+            LingkunganRuangKelas lrk = new LingkunganRuangKelas ();
+		lrk.input();
+		lrk.view();
+		lrk.analisis();
+                
+            KenyamananRuangKelas nrk = new KenyamananRuangKelas();
+ 		nrk.input();
+		nrk.view();
+		nrk.analisis();           
+            KebersihanRuangKelas brk = new KebersihanRuangKelas();
+ 		brk.input();
+                brk.view();
+		brk.analisis();           
+            KeamananRuangKelas amk = new KeamananRuangKelas();
+ 		amk.input();
+		amk.view();
+		amk.analisis();    
+                  */
     }
 }
