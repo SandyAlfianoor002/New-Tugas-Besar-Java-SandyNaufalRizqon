@@ -14,11 +14,13 @@ import java.util.Scanner;
 public class InstanceClass  {
 	
 	
-	Scanner input = new Scanner(System.in);
+	 Scanner input = new Scanner(System.in);
     //IdentitasRuangKelas
         private String NamaRuang;
 	private String LokasiRuang;
 	int ProgramSF;
+        String[] getNamaRuang;
+        String[] getLokasiRuang;
 
 	void setNamaRuang(String NR) {
             this.NamaRuang = NR;
