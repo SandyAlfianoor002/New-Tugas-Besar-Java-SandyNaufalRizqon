@@ -9,8 +9,10 @@ package tbsandynaufalrizqon;
  *
  * @author Sand
  */
-public class Hitung {
-    
-    int jumlah = 0;
-    
+public interface Warisan_jumlah_kondisi_posisi_sarana {
+   int analyticJumlah();
+   int analyticKondisi();
+   int analyticPosisi();
+   
+   void show(); 
 }
