@@ -5,7 +5,7 @@ import java.util.Scanner;
 
 //@Author : Muhammad Sandy Alfianoor
 
-public class KeamananRuangKelas extends induk_abstrak{
+public abstract class KeamananRuangKelas extends induk_abstrak{
     Scanner input = new Scanner(System.in);
 	private String kekokohan;
 	private String kunciPintu;
@@ -57,37 +57,45 @@ public class KeamananRuangKelas extends induk_abstrak{
 		System.out.println("bahaya : "+bahaya);	
 		
 	}
-	@Override
-	void analisis() {
+	
+        @Override
+	public int analisis_pertama() {
 		System.out.println("\n*Analisis*");
 		if(kekokohan.equals("kokoh")){
-			System.out.println("kekokohan SESUAI!");
-		}
-		else{
-			System.out.println("kekokohan TIDAK SESUAI!");
-		}
+            return 1;
+            }
+            else{
+            return 0;
+            }
+        }
+        
+        @Override
+	 public int analisis_kedua() {          
 		if(kunciPintu.equals("ada")){
-			System.out.println("kunci pintu SESUAI!");
-		}
-		else{
-			System.out.println("kunci pintu TIDAK SESUAI!");
-		}
+            return 1;
+            }
+            else{
+            return 0;
+            }
+        }
+         
+        @Override
+	 public int analisis_ketiga() {       
 		if(kunciJendela.equals("ada")){
-			System.out.println("kunci jendela SESUAI!");
-		}
-		else{
-			System.out.println("kunci jendela TIDAK SESUAI!");
-		}
+            return 1;
+            }
+            else{
+            return 0;
+            }
+        }
+         
+        @Override
+        public int analisis_keempat() {
 		if(bahaya.equals("aman")){
-			System.out.println("keamanan ruang SESUAI!");
-		}	
-		else{
-			System.out.println("keamanan ruang TIDAK SESUAI!");
-		}
-		
-		
-	}
-	
+            return 1;
+            }
+            else{
+            return 0;
+            }
+        }	
 }
-
-

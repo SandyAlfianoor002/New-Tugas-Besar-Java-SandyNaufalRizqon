@@ -3,7 +3,7 @@ package tbsandynaufalrizqon;
 
 import java.util.Scanner;
 
-public class KenyamananRuangKelas extends induk_abstrak{
+public abstract class KenyamananRuangKelas extends induk_abstrak{
    Scanner input = new Scanner (System.in);
     private String Kebisingan;
     private String Bau;
@@ -84,36 +84,53 @@ public class KenyamananRuangKelas extends induk_abstrak{
    }
    
    @Override
-   void analisis(){   
+   public int analisis_pertama(){   
    System.out.println("\n*Analisis*");
 		if(Kebisingan.equals("tidak_bising")){
-			System.out.println("kebisingan SESUAI!");
-		}
-		else{
-			System.out.println("kebisingan TIDAK SESUAI!");
-		}
-		if(Bau.equals("tidak_bau")){
-			System.out.println("bau SESUAI!");
-		}
-		else{
-			System.out.println("bau TIDAK SESUAI!");
-		}
-		if(Kebocoran.equals("tidak_bocor")){
-			System.out.println("kebocoran SESUAI!");
-		}
-		else{
-			System.out.println("kebocoran TIDAK SESUAI!");
-		}
-		if(Kerusakan.equals("tidak_rusak")){
-			System.out.println("kerusakan SESUAI!");
-		}	
-		else{
-			System.out.println("kerusakan TIDAK SESUAI!");
-		}
-		if(Keausan.equals("tidak_aus")){
-			System.out.println("keausa SESUAI!");
-		}
-		else{
-			System.out.println("keausan TIDAK SESUAI!");
+            return 1;
+            }
+            else{
+            return 0;
+            }
+   }
    
-                }}}
+      @Override
+   public int analisis_kedua(){ 
+		if(Bau.equals("tidak_bau")){
+            return 1;
+            }
+            else{
+            return 0;
+            }
+   }
+   
+      @Override
+   public int analisis_ketiga(){ 
+		if(Kebocoran.equals("tidak_bocor")){
+            return 1;
+            }
+            else{
+            return 0;
+            }
+   }
+   
+      @Override
+   public int analisis_keempat(){ 
+		if(Kerusakan.equals("tidak_rusak")){
+            return 1;
+            }
+            else{
+            return 0;
+            }
+   }
+   
+      @Override
+   public int analisis_kelima(){ 
+		if(Keausan.equals("tidak_aus")){
+            return 1;
+            }
+            else{
+            return 0;
+            }
+   }
+}

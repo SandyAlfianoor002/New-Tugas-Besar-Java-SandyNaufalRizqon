@@ -22,10 +22,22 @@ public class SavingObject {
         Analisis_CCTV cctv = new Analisis_CCTV() {};
         LogicKelas b = new LogicKelas();
                 
-        LingkunganRuangKelas lrk = new LingkunganRuangKelas ();
-	KenyamananRuangKelas nrk = new KenyamananRuangKelas();
-	KebersihanRuangKelas brk = new KebersihanRuangKelas();
-	KeamananRuangKelas amk = new KeamananRuangKelas();
+        LingkunganRuangKelas lrk = new LingkunganRuangKelas () {};
+	KenyamananRuangKelas nrk = new KenyamananRuangKelas() {};
+	KebersihanRuangKelas brk = new KebersihanRuangKelas() {
+
+        @Override
+        int analisis_kelima() {
+            throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+        }
+    };
+	KeamananRuangKelas amk = new KeamananRuangKelas() {
+
+        @Override
+        int analisis_kelima() {
+            throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+        }
+    };
 	
     public void saveIdentitasRuangKelas(){
         String namafile = "identitaskelas.txt";

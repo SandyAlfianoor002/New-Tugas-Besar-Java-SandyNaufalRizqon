@@ -3,7 +3,7 @@ package tbsandynaufalrizqon;
 
 import java.util.Scanner;
 
-public class LingkunganRuangKelas {
+public abstract class LingkunganRuangKelas extends induk_abstrak {
     Scanner input = new Scanner(System.in);
         private String Lantai;
 	private String Dinding;
@@ -60,6 +60,7 @@ public class LingkunganRuangKelas {
     }
     
     
+    @Override
     void input(){
       	System.out.println("\n=== LINGKUNGAN RUANG KELAS ===");
 		System.out.println("masukkan kondisi lantai : ");
@@ -74,6 +75,7 @@ public class LingkunganRuangKelas {
 		Jendela = input.next();
     }
     
+    @Override
     void view(){
     System.out.println("kondisi lantai : "+Lantai);
 		System.out.println("kondisi dinding : "+Dinding);
@@ -81,38 +83,54 @@ public class LingkunganRuangKelas {
 		System.out.println("kondisi pintu : "+Pintu);
 		System.out.println("kondisi jendela : "+Jendela);
     }
-    
-    void analisis(){
+               @Override
+   public int analisis_pertama(){
         		System.out.println("\n*Analisis Kebersihan*");
 		if(Lantai.equals("bersih")){
-			System.out.println("kondisi lantai SESUAI!");
-		}
-		else{
-			System.out.println("kondisi lantai TIDAK SESUAI!");
-		}
+            return 1;
+            }
+            else{
+            return 0;
+            }
+   }
+   
+               @Override
+   public int analisis_kedua(){
 		if(Dinding.equals("bersih")){
-			System.out.println("kondisi dinding SESUAI!");
-		}
-		else{
-			System.out.println("kondisi dinding TIDAK SESUAI!");
-		}
+            return 1;
+            }
+            else{
+            return 0;
+            }
+   }
+   
+               @Override
+   public int analisis_ketiga(){
 		if(Atap.equals("bersih")){
-			System.out.println("kondisi atap SESUAI!");
-		}
-		else{
-			System.out.println("kondisi atap TIDAK SESUAI!");
-		}
+            return 1;
+            }
+            else{
+            return 0;
+            }
+   }
+   
+               @Override
+   public int analisis_keempat(){
 		if(Pintu.equals("bersih")){
-			System.out.println("kondisi pintu SESUAI!");
-		}
-		else{
-			System.out.println("kondisi pintu TIDAK SESUAI!");
-		}
+            return 1;
+            }
+            else{
+            return 0;
+            }
+   }
+   
+               @Override
+   public int analisis_kelima(){
 		if(Jendela.equals("bersih")){
-			System.out.println("kondisi jendela SESUAI!");
-		}
-		else{
-			System.out.println("kondisi jendela TIDAK SESUAI!");
-		}
+            return 1;
+            }
+            else{
+            return 0;
+            }
     }
 }

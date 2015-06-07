@@ -3,7 +3,7 @@ package tbsandynaufalrizqon;
 
 import java.util.Scanner;
         
-public class KebersihanRuangKelas extends induk_abstrak{
+public abstract class KebersihanRuangKelas extends induk_abstrak{
     Scanner input = new Scanner (System.in);
     private String SirkulasiUdara;
     private int Pencahayaan;
@@ -13,43 +13,34 @@ public class KebersihanRuangKelas extends induk_abstrak{
     public Scanner getInput() {
         return input;
     }
-
     public void setInput(Scanner input) {
         this.input = input;
     }
-
     public String getSirkulasiUdara() {
         return SirkulasiUdara;
     }
-
     public void setSirkulasiUdara(String SirkulasiUdara) {
         this.SirkulasiUdara = SirkulasiUdara;
     }
-
     public int getPencahayaan() {
         return Pencahayaan;
     }
-
     public void setPencahayaan(int Pencahayaan) {
         this.Pencahayaan = Pencahayaan;
     }
-
     public int getKelembapan() {
         return Kelembapan;
     }
-
     public void setKelembapan(int Kelembapan) {
         this.Kelembapan = Kelembapan;
     }
-
     public int getSuhu() {
         return Suhu;
     }
-
     public void setSuhu(int Suhu) {
         this.Suhu = Suhu;
     }
-
+    
     @Override
    void input(){
    System.out.println("\n=== KEBERSIHAN RUANG KELAS ===");
@@ -72,32 +63,43 @@ public class KebersihanRuangKelas extends induk_abstrak{
    }
    
     @Override
-   void analisis(){
+   public int analisis_pertama(){
    System.out.println("\n*Analisis*");
-		if(SirkulasiUdara.equals("lancar")){
-			System.out.println("sirkulasi Udara SESUAI!");
-		}
-		else{
-			System.out.println("sirkulasi Udara TIDAK SESUAI!");
-		}
-		if(Pencahayaan >= 250 && Pencahayaan <= 300 ){
-			System.out.println("nilai pencahayaan SESUAI!");
-		}
-		else{
-			System.out.println("nilai pencahayaan TIDAK SESUAI!");
-		}
-		if(Kelembapan >=70 && Kelembapan <=80){
-			System.out.println("kelembapan SESUAI!");
-		}
-		else{
-			System.out.println("kelembapan TIDAK SESUAI!");
-		}
-		if(Suhu >=25 && Suhu <= 35){
-			System.out.println("suhu SESUAI!");
-		}
-		else{
-			System.out.println("suhu TIDAK SESUAI!");
-                        
-                }
+	if(SirkulasiUdara.equals("lancar")){
+            return 1;
+            }
+            else{
+            return 0;
+            }
+   }
+   
+    @Override
+   public int analisis_kedua(){
+	if(Pencahayaan >= 250 && Pencahayaan <= 300 ){
+            return 1;
+            }
+            else{
+            return 0;
+            }
+   }
+   
+            @Override
+   public int analisis_ketiga(){
+	if(Kelembapan >=70 && Kelembapan <=80){
+            return 1;
+            }
+            else{
+            return 0;
+            }
+   }
+   
+            @Override
+   public int analisis_keempat(){
+	if(Suhu >=25 && Suhu <= 35){
+            return 1;
+            }
+            else{
+            return 0;
+            }
    }
 }
